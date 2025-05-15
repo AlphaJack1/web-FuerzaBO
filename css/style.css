@@ -1,0 +1,555 @@
+:root {
+    --fuenteHeading: 'Roboto', 400, sans-serif;
+    --fuenteParrafos: 'Roboto', sans-serif;
+    
+    --primario: #e1e1e1;
+    --rojoFB: #d3070e;
+    --amarilloFB: #f3c100;
+    --verdeFB: #0a6635;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #c6c6c6;
+    --grisClaro: #878787;
+    --grisOscuro: #575756;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Globales */
+.contenedor {
+    max-width: 150rem;
+    width: 90%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+
+/* Utilidades */
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+/* Header */
+.webp .header {
+    background-image: url(../img/banner3.webp);
+}
+.no-webp .header {
+    background-image: url(../img/banner3.jpg);
+}
+.header {
+    height: 65rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+.barra{
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+/*Logotipo*/
+.logo__nombre{
+    font-weight: condensed italic;
+    color: var(--blanco);
+    padding-top: 3rem;
+}
+.logo__bold{
+    font-weight: bold condensed italic;
+    color: var(--blanco);
+}
+.logo__imagen{
+        justify-content: center;
+        align-items: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+.navegacion__enlace {
+    display: block;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: filter 0.3s ease;
+}
+.navegacion__enlace:hover {
+    filter: brightness(65%);
+}
+
+/* Para el menu*/
+.navegacion-colores {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-top: 2.5rem;
+    height: 6rem;
+    width: 90rem
+}
+
+.navegacion__grupo {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.navegacion__enlace {
+    display: block;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.rojo {
+    background-color: rgba(211, 7, 14, 0.7);
+}
+
+.amarillo {
+    background-color: rgba(243, 193, 0, 0.7);
+    color: var(--negro);
+}
+
+.verde {
+    background-color: rgba(10, 102, 53, 0.7);
+}
+
+/* Contenido */
+.blog {
+    background-color: var(--blanco);
+    color: var(--negro);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+.sidebar {
+    background-color: var(--primario);
+    padding: 2.5rem;
+    padding-top: 7rem;
+    border-radius: 0.5rem;
+}
+.midtitle{
+    justify-content: center;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.sidetitle{
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+    
+}
+/* Entrada */
+.entrada{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-bottom: 2px solid var(--negro);
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+}
+.entrada__imagen{
+    align-items: center;
+    flex: 1;
+}
+
+.entrada__contenido {
+    text-align: left;
+    flex: 1;
+}
+@media (min-width: 768px) {
+    .entrada {
+        flex-direction: row;
+    }
+}
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+/*Misión, Visión y Objetivos*/
+.miviobj{
+    padding: 2rem;
+    text-align: left;
+}
+.mission {
+    align-items: center;
+    text-align: justify;
+}
+
+/*Plataforma*/
+.tema, .post {
+    background-color: var(--grisClaro);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: background-color 0.3s ease;
+}
+.respuesta{
+    background-color: var(--primario);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: background-color 0.3s ease;
+}
+.lista-temas{
+    background-color: var(--primario);
+    justify-content: baseline;
+    gap: 2rem;
+}
+.tema__enlace {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    column-gap: 1rem;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+.tema__icono {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+}
+.tema__icono img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+.tema__nuevo{
+    background-color: var(--blanco);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: background-color 0.3s ease;
+}
+.tema:hover .tema__icono img {
+    content: url('img/radio_button_checkedFuerzaBO.svg');
+}
+.input {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+.campo_plataforma{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 80rem;
+    height: 8rem;
+    align-items: flex-start;
+}
+
+/* Productos y Servicios */
+.descripcion, .features, .cta {
+    margin-bottom: 3rem;
+}
+.descripcion__fin{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+.features li {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+.logo__prod {
+    position: relative;
+    background-image: url('../img/item_circle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo__prod img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Donaciones */
+.donaciones {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.donaciones h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.donaciones p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.opciones button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background-color: var(--verdeFB, #0a6635);
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.opciones button:hover {
+    filter: brightness(85%);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.campo input {
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+}
+
+.boton-donar {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--rojoFB, #d3070e);
+    color: white;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.4rem;
+}
+
+.boton-donar:hover {
+    filter: brightness(90%);
+}
+
+/* Boton */
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    text-align: center;
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+@media (min-width: 768px) {
+    .boton{
+    display: inline-block;
+    }
+}
+.boton:hover{
+    cursor: pointer;
+}
+.boton--primario {
+    background-color: var(--negro);
+}
+.boton--secundario {
+    background-color: var(--negro);
+}
+
+/* Cursos */
+.cursos{
+    list-style: none;
+}
+.widget-curso {
+    border-bottom: 1px solid var(--grisClaro);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label,
+.curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.widget-curso__info,
+.curso__info {
+    font-weight: normal;
+}
+.widget-curso__label,
+.curso__label
+.widget-curso__info,
+.curso__info {
+    font-size: 2rem;
+}
+
+/* Footer */
+.footer{
+    background-color: var(--negro);
+    padding-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+/* Nosotros */
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+/* Cursos */
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid(--grisClaro);
+}
+@media (min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.curso:last-of-type{
+    border:none;
+}
+
+/* Contacto */
+.contacto-bg {
+    background-image: url(../img/banner.jpg);
+    height: 80rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--primario);
+    margin: -5rem auto 0 auto;
+    width: 80%;
+    padding: 4rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 3rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: left;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+.campo__field {
+    flex: 1;
+    width: 110rem;
+    border: 1px solid var(--negro);
+}
+.campo__field--textarea {
+    height: 30rem;
+}
